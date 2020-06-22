@@ -103,32 +103,7 @@ def common_start_hour(df):
     popular_hour=df['hour'].mode()[0]
     print('Most Popular Start Hour:',popular_hour)
 #definition of most frequent times of travel function
-def time_stats(df, month, day):
-    print('\nCalculating The Most Frequent Times of Travel...\n')
-    start_time = time.time()
-    if(month=='all' and day=='all'):
-        # display the most common month
-        common_month(df)
-        # display the most common day of week
-        common_day(df)
-        # display the most common start hour
-        common_start_hour(df)
-    elif(month!='all' and day=='all'):
-        # display the most common day of week
-        common_day(df)
-        # display the most common start hour
-        common_start_hour(df)
-    elif(month=='all' and day!='all'):
-        # display the most common start hour
-        common_start_hour(df)
-        # display the most common month
-        common_month(df)
-    elif(month!='all'and day!='all'):
-        common_start_hour(df)
-        
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
 #definition of the most popular stations and trip function
 def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
